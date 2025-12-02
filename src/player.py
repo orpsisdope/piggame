@@ -6,5 +6,5 @@ class Player:
     def add_score(self, point):
         self.score += point
 
-    def eset_score(self):
-        pass
+    def reset_score(self):
+        self.score = 0
