@@ -4,7 +4,7 @@ class Player:
         self.score = 0
 
     def add_score(self, point):
-        pass
+        self.score += point
 
     def eset_score(self):
         pass
