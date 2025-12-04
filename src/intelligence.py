@@ -1,6 +1,5 @@
 import random
 
-
 class Intelligence:
 
 
@@ -16,3 +15,6 @@ class Intelligence:
                 return turn_score >= random.randint(16, 21)
             case "hard":
                 return turn_score >= random.randint(22, 28)
+            case _:
+                print("you entered wrong level so by default we put easy level")
+                return turn_score >=  random.randint(10, 15)
