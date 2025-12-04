@@ -33,3 +33,16 @@ class HighScore:
         with open(self.filename, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
 
+
+
+
+
+    def update(self, player_name, score):
+        data = self._load()
+        stats = data.get(player_name, {"games": 0, "total_score": 0})
+        stats["games"] += 1
+        stats["total_score"] += score
+        data[player_name] = stats
+        self._save(data)
+
+
