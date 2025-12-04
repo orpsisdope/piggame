@@ -23,3 +23,8 @@ def test_roll_distribution():
 def test_multiple_instances():
     d1, d2 = Dice(), Dice()
     assert d1.sides == 6 and d2.sides == 6
+
+
+def test_sides_attribute():
+    dice = Dice()
+    assert hasattr(dice, "sides")
