@@ -15,6 +15,9 @@ class Intelligence:
                 return turn_score >= random.randint(16, 21)
             case "hard":
                 return turn_score >= random.randint(22, 28)
+            case "bananas":
+                return turn_score >= random.randint(29, 35)
             case _:
                 print("you entered wrong level so by default we put easy level")
+                print("cause we think you are loser")
                 return turn_score >=  random.randint(10, 15)
