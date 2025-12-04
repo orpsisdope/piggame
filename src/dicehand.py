@@ -7,8 +7,3 @@ class DiceHand:
     def roll_all(self):
         return [i.roll() for i in self.dice]
     
-
-    print("hello")
-
-
-    print("james")
