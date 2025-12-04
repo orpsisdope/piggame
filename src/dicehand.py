@@ -9,3 +9,6 @@ class DiceHand:
     
 
     print("hello")
+
+
+    print("james")
