@@ -15,3 +15,6 @@ def test_roll_in_range():
         
 def test_roll_distribution():
     dice = Dice()
+    rolls = [dice.roll() for _ in range(50)]
+    assert all(1 <= r <= 6 for r in rolls)
+    assert len(set(rolls)) > 1
