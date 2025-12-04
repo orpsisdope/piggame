@@ -23,3 +23,13 @@ class HighScore:
 
 
     def _load(self):
+        with open(self.filename, "r", encoding="utf-8") as file:
+            return json.load(file)
+
+
+
+
+    def _save(self, data):
+        with open(self.filename, "w", encoding="utf-8") as file:
+            json.dump(data, file, indent=4)
+
