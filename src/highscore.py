@@ -46,3 +46,15 @@ class HighScore:
         self._save(data)
 
 
+
+
+
+    def show(self):
+        data = self._load()
+        return "\n".join(
+            f"{name}: {info['total_score']} points over {info['games']} games"
+            for name, info in data.items()
+        )
+
+
+
