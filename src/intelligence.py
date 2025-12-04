@@ -8,6 +8,6 @@ class Intelligence:
     def should_hold(self, turn_score):
         match self.level:
             case "easy":
-                return turn_score >=  12
+                return turn_score >= random.randint(10, 15)
             case "medium":
-                return turn_score >=  15
+                return turn_score >= random.randint(16, 21)
