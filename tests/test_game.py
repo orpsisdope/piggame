@@ -22,3 +22,9 @@ def test_switch_player():
     assert game.current == 0
     game.switch_player()
     assert game.current == 1
+
+
+def test_game_custom_dice_and_target():
+    game = Game("A", "B", dice_count=3, target_score=50)
+    assert len(game.dicehand.dice) == 3
+    assert game.target_score == 50
