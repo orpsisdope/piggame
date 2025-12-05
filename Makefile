@@ -1,5 +1,7 @@
+.PHONY: run test coverage lint doc uml
+
 run:
-	python src/main.py
+	py src/main.py
 
 test:
 	pytest tests/ --verbose
@@ -12,8 +14,8 @@ lint:
 	flake8 src
 
 doc:
-	sphinx-apidoc -o doc/api src
-	sphinx-build -b html doc/api doc/api/html
+	py -m sphinx.ext.apidoc -o doc/source/api src
+	py -m sphinx -b html doc/source doc/build/html
 
 uml:
 	pyreverse -o png -p pig_dice src
