@@ -11,3 +11,9 @@ env/
 
 .vscode/
 .idea/
+
+
+
+doc/api/
+doc/api/html/
+
