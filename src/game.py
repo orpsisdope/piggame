@@ -21,3 +21,7 @@ class Game:
         self.ai_mode = ai_mode
         self.intelligence = Intelligence(ai_level)
         self.target_score = target_score
+
+
+    def switch_player(self):
+        self.current = 1 - self.current
