@@ -1,17 +1,7 @@
 import json
 import os
 
-
-
-
-
-
-
-
 class HighScore:
-
-
-
 
     def __init__(self, filename="highscore.json"):
         self.filename = filename
@@ -19,23 +9,13 @@ class HighScore:
               with open(filename, "w", encoding="utf-8") as file:
                 json.dump({}, file)
 
-
-
-
     def _load(self):
         with open(self.filename, "r", encoding="utf-8") as file:
             return json.load(file)
 
-
-
-
     def _save(self, data):
         with open(self.filename, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4)
-
-
-
-
 
     def update(self, player_name, score):
         data = self._load()
@@ -44,10 +24,6 @@ class HighScore:
         stats["total_score"] += score
         data[player_name] = stats
         self._save(data)
-
-
-
-
 
     def show(self):
         data = self._load()

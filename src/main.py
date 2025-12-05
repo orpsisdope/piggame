@@ -1,8 +1,6 @@
 import cmd
-from src.game import Game
-
-
-
+from game import Game
+from highscore import HighScore
 
 class PigDiceShell(cmd.Cmd):
 
@@ -26,25 +24,14 @@ class PigDiceShell(cmd.Cmd):
         while not self.game.play_turn():
             pass
 
-
-
-    def do_highscore(self, arg):
-        from src.highscore import HighScore
-
-
-
+    def do_highscore(self, _):
 
         hs = HighScore()
         print(hs.show())
-        
-    def do_quit(self, arg):
+
+    def do_quit(self, _):
         print("Goodbye!")
         return True
-
-
-
-
-
 
 if __name__ == "__main__":
     PigDiceShell().cmdloop()
