@@ -1,4 +1,4 @@
-from src.player import Player
+from .player import Player
 from src.dicehand import DiceHand
 from src.intelligence import Intelligence
 from src.highscore import HighScore
