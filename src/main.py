@@ -25,3 +25,14 @@ class PigDiceShell(cmd.Cmd):
         self.game = Game(parts[0], parts[1], ai_mode, ai_level)
         while not self.game.play_turn():
             pass
+
+
+
+    def do_highscore(self, arg):
+        from src.highscore import HighScore
+
+
+
+
+        hs = HighScore()
+        print(hs.show())
