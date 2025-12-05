@@ -25,3 +25,21 @@ class Game:
 
     def switch_player(self):
         self.current = 1 - self.current
+
+
+    def play_turn(self):
+
+
+        player = self.players[self.current]
+        turn_score = 0
+
+
+        while True:
+            rolls = self.dicehand.roll_all()
+            print(f"{player.name} rolled {rolls}")
+
+
+            if 1 in rolls:                  
+                print("Oops! Rolled a 1 lost turn points.")
+                turn_score = 0
+                break
