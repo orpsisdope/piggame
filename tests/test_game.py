@@ -15,3 +15,10 @@ def test_game_initialization_defaults():
     assert game.current == 0
     assert len(game.dicehand.dice) == 1
     assert game.target_score == 100
+
+
+def test_switch_player():
+    game = Game("A", "B")
+    assert game.current == 0
+    game.switch_player()
+    assert game.current == 1
