@@ -71,3 +71,13 @@ class Game:
 
         player.add_score(turn_score)
         print(f"{player.name}'s total score: {player.score}")
+
+
+        if player.score >= self.target_score:
+            print(f"{player.name} wins!")
+            self.highscore.update(player.name, player.score)
+            return True
+
+
+        self.switch_player()
+        return False
