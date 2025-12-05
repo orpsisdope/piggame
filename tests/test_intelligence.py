@@ -14,3 +14,17 @@ def test_easy_mode_uses_random_threshold(monkeypatch):
     ai = Intelligence("easy")
     assert ai.should_hold(11) is False
     assert ai.should_hold(12) is True
+
+
+def test_medium_mode_uses_random_threshold(monkeypatch):
+    monkeypatch.setattr(intel_mod.random, "randint", lambda a, b: 18)
+    ai = Intelligence("medium")
+    assert ai.should_hold(17) is False
+    assert ai.should_hold(18) is True
+
+
+def test_hard_mode_uses_random_threshold(monkeypatch):
+    monkeypatch.setattr(intel_mod.random, "randint", lambda a, b: 24)
+    ai = Intelligence("hard")
+    assert ai.should_hold(23) is False
+    assert ai.should_hold(24) is True
