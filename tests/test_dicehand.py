@@ -19,3 +19,9 @@ def test_roll_range():
     rolls = hand.roll_all()
     for r in rolls:
         assert 1 <= r <= 6
+
+
+def test_roll_count():
+    hand = DiceHand(5)
+    rolls = hand.roll_all()
+    assert len(rolls) == 5
