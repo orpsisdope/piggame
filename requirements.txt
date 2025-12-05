@@ -1,0 +1,9 @@
+cmd2
+pylint
+flake8
+flake8-docstrings
+flake8-polyfill
+pytest
+pytest-cov
+sphinx
+pyreverse
