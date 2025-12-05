@@ -1,0 +1,49 @@
+[MASTER]
+ignore=venv,.venv,build,dist,doc
+jobs=1
+load-plugins=
+    pylint.extensions.docparams
+
+[MESSAGES CONTROL]
+# Disable some common noisy messages for small student projects
+disable=
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring
+    C0116,  # missing-function-docstring
+    R0903,  # too-few-public-methods
+    R0913,  # too-many-arguments
+    R0914,  # too-many-locals
+    R1705   # no-else-return
+
+[REPORTS]
+output-format=colorized
+reports=no
+score=yes
+
+[FORMAT]
+max-line-length=88
+indent-string='    '
+max-module-lines=1000
+
+[BASIC]
+good-names=i,j,k,x,y,_,r,db,id
+argument-naming-style=snake_case
+attr-naming-style=snake_case
+class-naming-style=PascalCase
+const-naming-style=UPPER_CASE
+function-naming-style=snake_case
+method-naming-style=snake_case
+module-naming-style=snake_case
+variable-naming-style=snake_case
+
+[DESIGN]
+max-args=10
+max-locals=30
+max-returns=6
+max-branches=12
+max-statements=50
+max-bool-expr=5
+
+[TYPECHECK]
+ignored-modules=
+ignored-classes=
