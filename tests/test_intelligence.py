@@ -28,3 +28,10 @@ def test_hard_mode_uses_random_threshold(monkeypatch):
     ai = Intelligence("hard")
     assert ai.should_hold(23) is False
     assert ai.should_hold(24) is True
+
+
+def test_bananas_mode_uses_random_threshold(monkeypatch):
+    monkeypatch.setattr(intel_mod.random, "randint", lambda a, b: 30)
+    ai = Intelligence("bananas")
+    assert ai.should_hold(29) is False
+    assert ai.should_hold(30) is True
