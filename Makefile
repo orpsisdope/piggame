@@ -18,6 +18,4 @@ doc:
 	py -m sphinx -b html doc/source doc/build/html
 
 uml:
-	pyreverse -o png -p pig_dice -d doc/uml src
-	py -c "import shutil, pathlib; d = pathlib.Path('doc/uml'); shutil.move(str(d/'classes_pig_dice.png'), str(d/'class_diagram.png'))"
-	py -c "import shutil, pathlib; d = pathlib.Path('doc/uml'); shutil.move(str(d/'packages_pig_dice.png'), str(d/'package_diagram.png'))"
+	pyreverse -o html -p pig_dice -d doc/uml src
