@@ -1,6 +1,6 @@
 import cmd
 from .game import Game
-from highscore import HighScore
+from .highscore import HighScore
 
 class PigDiceShell(cmd.Cmd):
 
