@@ -43,3 +43,17 @@ class Game:
                 print("Oops! Rolled a 1 lost turn points.")
                 turn_score = 0
                 break
+            gained = sum(rolls)              
+            turn_score += gained
+            print(f"Turn gained: {gained}")
+            print(f"Turn score: {turn_score}")
+
+
+            if player.score + turn_score >= self.target_score:
+                break
+
+
+            if self.ai_mode and self.current == 1:
+                if self.intelligence.should_hold(turn_score):
+                        print(f"{player.name} (AI in {self.intelligence.level} mode) holds.")
+                        break
