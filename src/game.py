@@ -57,3 +57,17 @@ class Game:
                 if self.intelligence.should_hold(turn_score):
                         print(f"{player.name} (AI in {self.intelligence.level} mode) holds.")
                         break
+                else:
+                        print(f"{player.name} (AI) chooses to roll again.")
+            else:
+                choice = input("Roll again (r) or hold (h)? ").strip().lower()
+                if choice == "h":
+                    break
+                elif choice == "r":
+                    print(f"{player.name} chooses to roll again.")
+                else:
+                    print("Invalid choice, please enter 'r' or 'h'.")
+
+
+        player.add_score(turn_score)
+        print(f"{player.name}'s total score: {player.score}")
