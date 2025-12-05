@@ -59,6 +59,7 @@ class Game:
                         break
                 else:
                         print(f"{player.name} (AI) chooses to roll again.")
+                        print()
             else:
                 choice = input("Roll again (r) or hold (h)? ").strip().lower()
                 if choice == "h":
@@ -67,6 +68,7 @@ class Game:
                     print(f"{player.name} chooses to roll again.")
                 else:
                     print("Invalid choice, please enter 'r' or 'h'.")
+                    print()
 
 
         player.add_score(turn_score)
