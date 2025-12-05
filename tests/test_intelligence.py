@@ -35,3 +35,12 @@ def test_bananas_mode_uses_random_threshold(monkeypatch):
     ai = Intelligence("bananas")
     assert ai.should_hold(29) is False
     assert ai.should_hold(30) is True
+
+
+
+def test_unknown_level_defaults_to_easy_range(monkeypatch):
+    monkeypatch.setattr(intel_mod.random, "randint", lambda a, b: 11)
+    ai = Intelligence("superhard")
+    assert ai.level == "superhard"
+    assert ai.should_hold(10) is False
+    assert ai.should_hold(11) is True
